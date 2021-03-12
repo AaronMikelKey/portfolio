@@ -1,0 +1,115 @@
+//Color settings (light, dark)
+$first-l: #80dae2 //rgb(128, 218, 226)
+$fourth-l: #cffff3 //rgb(207, 255, 243)
+$first-d: #2e3026 //rgb(46,48,38)
+$fourth-d: #26302a //rgb(38, 48, 42)
+
+//transition setting
+$transition: 0.35s ease-in-out
+
+//lightmode settings
+@mixin lightmode 
+  color : #000
+  transition : color $transition
+  transition : background $transition
+  transition : background-color $transition
+  html
+    background : #FFF
+  .nav
+    background-color : $fourth-l
+    button
+      background-color : white
+      border : 3px solid black
+      .btn-slider
+        transform : translate(0)
+  .active
+    li
+      background-color : $fourth-d
+      color : #FFF
+
+//darkmode settings
+@mixin darkmode 
+  color : #FFF
+  transition : color $transition
+  transition : background $transition
+  transition : background-color $transition
+  html
+    background : #222
+  body
+    background : #000
+    background : radial-gradient(circle, rgba(46,48,38,0.6) 0%, rgba(46,48,38,0.65) 40%, rgba(46,48,38,0.7) 70%, rgba(46,48,38,0.85) 100%)
+    position : relative
+    top : 0
+    left : 0
+  .nav
+    background-color : $fourth-d
+    button
+      background-color : black
+      border : 3px solid white
+      .btn-slider
+        transform : translate(100%)
+  .active
+    li
+      background-color : $first-l
+      color : #000
+
+//sitewide settings
+html, body
+  padding : 0
+  margin : 0
+  height : 100%
+  width : 100%
+
+html
+  //Phones
+  @media screen and ( max-width : 480px )
+    
+  //Tablets
+  @media screen and ( max-width: 768px )
+    
+  //No navbar above this line
+  @media screen and ( max-width : 1023px )
+    //themeName spills over below this part
+    #themeName
+      display : none
+  //small screens, laptops
+  @media screen and ( max-width: 1024px )
+    
+  //large screens
+  @media screen and ( min-width: 1025px )
+    
+
+body
+  div
+    width : 100%
+
+//Gridbox
+.grid-container
+  height : fit-content
+  width : 100vw
+  display : grid
+  grid-template-columns : 10% 1fr 5% 1fr 1fr 10%
+  grid-template-rows : 50px calc(100vh - 190px) 400px 400px 400px 110px
+  gap : 70px 20px
+  grid-template-areas : ". . . . . ."". content-1 content-1 content-1 picture-1 ."". picture-2 content-2 content-2 . ."". . content-3 content-3 picture-3 ."". picture-4 content-4 . . .""footer footer footer footer footer footer"
+
+.nav
+  grid-area : nav
+
+.content-1
+  grid-area : content-1
+
+.picture-1
+  grid-area : picture-1
+
+.content-2
+  grid-area : content-2
+
+.content-3
+  grid-area : content-3
+
+.content-4
+  grid-area : content-4
+
+.footer
+  grid-area : footer
