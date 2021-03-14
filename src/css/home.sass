@@ -18,16 +18,54 @@
     font-size : 4em 
 
 .picture-1
-  height : calc(60vw/4)
-  width : 60%
+  height : 150px
+  width : 150px
   border : 1px solid white
   border-radius : 50%
+  margin : auto
+
+.bounce
+  animation : bounce-1
+  animation-duration : 4s
+  animation-timing-function : cubic-bezier(0.3,0.65,0.2,0.65)
+  animation-iteration-count : infinite
+  margin-top : 20px
+
+@keyframes bounce-1
+  0%
+    transform : translateY(0)
+  50%
+    transform : translateY(60px)
+  100%
+    transform : translateY(0)
+
+.arrow-div
+  display : flex
+  flex-direction : row
+  svg
+    font-size : 40px
+    margin : auto
+
 
 .content-2
   height : 100% !important
   width : 100% !important
-  background-color : white
-  border : 1px solid black
+  text-align : center
+  display : grid
+  grid-template-columns : 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows : 100px 100px 100px 100px
+  grid-template-areas : "title title title title title"". . . . ."". . . . ."". . . . ."
+  .title
+    grid-area : title
+    display : flex
+    flex-direction : column
+    justify-content: center
+  .item
+    margin : auto
+    svg
+      margin : auto
+      display: block
+      font-size : 40px
 
 .content-3
   height : 100% !important
