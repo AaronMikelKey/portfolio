@@ -7,30 +7,31 @@
   z-index : 1
 
 ul
+  height : 100%
   list-style : none
   margin : 0
   padding : 0
-  a
-    li
-      @media screen and ( min-width: 769px )
-        display : inline-block
-        width : 22%
-        margin : 0 0
-        text-align : center
-        line-height : 2.61em
-        font-size : 1.2em
-        svg
-          margin-right : 5px
-  div
-    display : inline
-    width : 12%
-    margin-left : 5px
+  li
+    @media screen and ( min-width: 769px )
+      display : inline-block
+      width : 20%
+      margin : 0 0
+      text-align : center
+      line-height : 2.61em
+      font-size : 1.2em
+      svg
+        margin-right : 5px
 .btn-switch
-  height : 2.61em
-  width : 5.5em
+  height : calc(2.61em - 6px)
+  width : calc(5.5em - 6px)
   border-radius : 15px
   padding : 0
   transition : background-color 0.35s ease-in-out
+  position : absolute
+  top : calc((2.61em - 6px)/2)
+  left : calc(5.5em - 6px)
+  margin-top : -2.61em
+  margin-left : -5.5em
   .btn-slider
     height : 100%
     width : 50%

@@ -25,12 +25,11 @@ const Navbar = (props) => {
         <NavLink to='/projects'>
           <li className={props.themeName}><i className='fas fa-code-branch' />Projects</li>
         </NavLink>
-        <div>
+        <li>
           <button type='button' className={props.themeName + ' ' + 'btn-switch'} onClick={props.changeTheme}> 
             <div className='btn-slider'></div>
           </button>
-          <div id='themeName'>{themeName}</div>
-        </div>
+        </li>
       </ul>
     </nav>
   )
