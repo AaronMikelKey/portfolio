@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import 'react-device-detect'
 import '../css/devTest.sass'
 import { browserName, browserVersion, fullBrowserVersion, isChrome, isFirefox, isSafari } from 'react-device-detect'
 
 const DevTest = () => {
+
+  const [viewHeight, setViewHeight] = useState(window.innerHeight)
+  const [scrollTop, setScrollTop] = useState(window.scrollY)
+  
+  useEffect(() => {
+    const onScroll = (e) => {
+      setScrollTop(Math.ceil((e.target.documentElement.scrollTop)/viewHeight))
+    }
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   const changeTheme = () => {
     let l = document.querySelectorAll('.lightmode');
     let d = document.querySelectorAll('.darkmode');
@@ -21,6 +33,28 @@ const DevTest = () => {
     <div id='main'>
       This is the Test Page.
       <button onClick={changeTheme}>Darkmode</button>
+      <table id='scrollVal'>
+        <thead>
+          <tr>
+            <th>
+              scroll top
+            </th>
+            <th>
+              window height
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              {scrollTop}
+            </td>
+            <td>
+              {viewHeight}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   )
 }

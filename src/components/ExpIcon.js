@@ -3,7 +3,6 @@ import iconList from './IconList.js'
 
 const ExpIcon = () => {
 	let arr = iconList
-	console.log(arr)
 	return arr.map((item) => {
 		if(item.className !== 'express-svg')
 			return (

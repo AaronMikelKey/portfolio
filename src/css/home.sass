@@ -1,9 +1,16 @@
+@use './vars.sass' as *
+
 @font-face 
   font-family : Fredericka the Great
   src : url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
 
 path
   fill: currentColor
+
+.grid-container
+  @include grid-container
+  grid-template-rows : 50px minmax(500px,100vh) 500px 110px
+  grid-template-areas : ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
   height : 100% !important
@@ -40,15 +47,19 @@ path
 
 @keyframes bounce-1
   0%
-    transform : translateY(0)
+    transform : translateY(80px)
   25%
-    transform : translateY(60px)
+    transform : translateY(0)
   50%
-    transform : translateY(0)
+    transform : translateY(80px)
   75%
-    transform : translateY(60px)
-  100%
     transform : translateY(0)
+  100%
+    transform : translateY(80px)
+
+.bounced
+  position : relative
+  top : 80px
 
 .arrow-div
   display : flex
@@ -77,19 +88,17 @@ path
       margin : auto
       display: block
       font-size : 30px
+  div
+    display : contents
 
 .express-svg
   height : 1em
   width : 1em
 
 .content-3
-  height : 100% !important
-  width : 100% !important
-  background-color : white
-  border : 1px solid black
+  display : none
+  height : 0
 
 .content-4
-  height : 100% !important
-  width : 100% !important
-  background-color : white
-  border : 1px solid black
+  display : none
+  height : 0

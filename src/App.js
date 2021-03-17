@@ -15,10 +15,27 @@ import DevTest from './dir/DevTest'
 
 
 const App = () => {
+  {/* Determines lightmode or darkmode */}
   const [themeName, changeTheme] = useState('darkmode')
+
+  {/* State setting for fade in elements */}
+  const [loaded, setLoaded] = useState({ 
+    home: {
+      content1: false,
+      content2: false
+    },
+    about: {
+      content1: false,
+      content2: false
+    },
+    projects: {
+      content1: false,
+      content2: false
+    }
+  })
+
   if (isIE) return <div>Internet Explorer is not supported.  Please download Firefox, Chrome, or another web browser.</div>
   const changeThemeClick = () => {
-    console.log(themeName);
     let l = document.querySelectorAll('.lightmode');
     let d = document.querySelectorAll('.darkmode');
     if (themeName === 'darkmode') {
@@ -41,23 +58,23 @@ const App = () => {
       <Switch>
 
         <Route path="/about">
-          <About />
+          <About loaded={loaded} setLoaded={setLoaded} />
         </Route>
 
         <Route path="/contact">
-          <Contact />
+          <Contact loaded={loaded} setLoaded={setLoaded} />
         </Route>
 
         <Route path="/projects">
-          <Projects />
+          <Projects loaded={loaded} setLoaded={setLoaded} />
         </Route>
 
         <Route path="/devtest">
-          <DevTest />
+          <DevTest loaded={loaded} setLoaded={setLoaded} />
         </Route>
 
         <Route path="/">
-          <Home />
+          <Home loaded={loaded} setLoaded={setLoaded} />
         </Route>
 
       </Switch>
