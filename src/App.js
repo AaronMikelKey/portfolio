@@ -11,6 +11,7 @@ import Contact from './dir/Contact'
 import Projects from './dir/Projects'
 import Home from './dir/Home'
 import DevTest from './dir/DevTest'
+import ScrollTop from './components/ScrollTop'
 
 
 
@@ -54,6 +55,7 @@ const App = () => {
   }
   return (
     <Router>
+      <ScrollTop />
       <Navbar themeName={themeName} changeTheme={ changeThemeClick }/>
       <Switch>
 
