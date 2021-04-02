@@ -1,104 +1,129 @@
 @use './vars.sass' as *
 
 @font-face 
-  font-family : Fredericka the Great
-  src : url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
+	font-family: Fredericka the Great
+	src: url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
 
 path
-  fill: currentColor
+	fill: currentColor
 
 .grid-container
-  @include grid-container
-  grid-template-rows : 50px minmax(500px,100vh) 500px 110px
-  grid-template-areas : ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
+	@include grid-container
+	grid-template-rows: 50px minmax(500px,100vh) minmax(500px,100vh) 110px
+	grid-template-areas: ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
-  height : 100% !important
-  width : 100% !important
-  text-align : center
-  padding : 0
-  h1, h2
-    font-family : 'Fredericka the Great'
-    margin : 0
-    padding : 0
-  h1
-    font-size : 6em
-  h2
-    font-size : 4em 
+	height: 100% !important
+	width: 100% !important
+	text-align: center
+	padding: 0
+	h1, h2
+		font-family: 'Fredericka the Great'
+		margin: 0
+		padding: 0
+	h1
+		font-size: 6em
+	h2
+		font-size: 4em 
 
 .picture-1
-  margin-left : auto
-  margin-right : auto
-  margin-top : 20px
-  div
-    display : flex
-    justify-content : center
-  img
-    height : 90%
-    width : 90%
-    border-radius : 50%
+	margin-left: auto
+	margin-right: auto
+	margin-top: 20px
+	div
+		display: flex
+		justify-content: center
+	img
+		height: 90%
+		width: 90%
+		border-radius: 50%
 
 .bounce
-  animation : bounce-1
-  animation-duration : 8s
-  animation-timing-function : cubic-bezier(0.3,0.65,0.2,0.65)
-  animation-iteration-count : 2
-  margin-top : 20px
+	animation: bounce-1
+	animation-duration: 8s
+	animation-timing-function: cubic-bezier(0.3,0.65,0.2,0.65)
+	animation-iteration-count: 2
+	margin-top: 20px
 
 @keyframes bounce-1
-  0%
-    transform : translateY(80px)
-  25%
-    transform : translateY(0)
-  50%
-    transform : translateY(80px)
-  75%
-    transform : translateY(0)
-  100%
-    transform : translateY(80px)
+	0%
+		transform: translateY(80px)
+	25%
+		transform: translateY(0)
+	50%
+		transform: translateY(80px)
+	75%
+		transform: translateY(0)
+	100%
+		transform: translateY(80px)
 
 .bounced
-  position : relative
-  top : 80px
+	position: relative
+	top: 80px
 
 .arrow-div
-  display : flex
-  flex-direction : row
-  svg
-    font-size : 40px
-    margin : auto
+	display: flex
+	flex-direction: row
+	svg
+		font-size: 40px
+		margin: auto
 
 
 .content-2
-  height : 100% !important
-  width : 100% !important
-  text-align : center
-  display : grid
-  grid-template-columns : 1fr 1fr 1fr 1fr 1fr
-  grid-template-rows : 100px 100px 100px 100px 100px
-  grid-template-areas : "title title title title title"". . . . ."". . . . ."". . . . ."". . . . ."
-  .title
-    grid-area : title
-    display : flex
-    flex-direction : column
-    justify-content: center
-  .item
-    margin : auto
-    svg
-      margin : auto
-      display: block
-      font-size : 30px
-  div
-    display : contents
+	height: 100% !important
+	width: 100% !important
+	text-align: center
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+	grid-template-rows: 100px 100px 100px 100px 100px
+	grid-template-areas: "title title title title title"". . . . ."". . . . ."". . . . ."". . . . ."
+	.title
+		grid-area: title
+		display: flex
+		flex-direction: column
+		justify-content: center
+	.item
+		margin: auto
+		svg
+			margin: auto
+			display: block
+			font-size: 30px
+	div
+		display: contents
 
 .express-svg
-  height : 1em
-  width : 1em
+	height: 1em
+	width: 1em
 
 .content-3
-  display : none
-  height : 0
+	display: none
+	height: 0
 
 .content-4
-  display : none
-  height : 0
+	display: none
+	height: 0
+
+@media screen and (max-width: 1023px)
+	.grid-container
+		grid-template-rows: 150px minmax(400px,550px) 500px 110px
+		grid-template-columns: 2% 1fr 1% 1fr 1fr 2%
+		gap: 30px 20px
+		grid-template-areas: ". picture-1 picture-1 picture-1 picture-1 ."". content-1 content-1 content-1 content-1 ."". content-2 content-2 content-2 content-2 ."". . content-3 content-3 picture-3 ."". picture-4 content-4 . . .""footer footer footer footer footer footer"
+	.content-1
+		h1
+			font-size: 3em
+		h2
+			font-size: 2em
+	.picture-1
+		position: relative
+		top: 50px
+		div
+			height: 100%
+			width: 100%
+			img
+				height: 90%
+				width: auto
+	.content-2
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: 60px 100px 100px 100px 100px
+		grid-template-areas: "title title title title"". . . ."". . . ."". . . ."". . . ."
