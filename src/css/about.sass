@@ -1,0 +1,11 @@
+@use './vars.sass' as *
+
+.grid-container
+  grid-template-columns: 2% 1fr 1% 1fr 1fr 2%
+  grid-template-rows: 50px 100vh 500px 400px 400px 110px
+  gap: 0 0
+  grid-template-areas: ". . . . . ."". content-1 content-1 content-1 content-1 .""footer footer footer footer footer footer"
+  .content-1
+    grid-area: content-1
+  .footer
+    grid-area: footer

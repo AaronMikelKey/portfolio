@@ -57,7 +57,7 @@ const App = () => {
       <Navbar themeName={themeName} changeTheme={ changeThemeClick }/>
       <Switch>
 
-        <Route path="/about">
+        <Route path="/about.html">
           <About loaded={loaded} setLoaded={setLoaded} />
         </Route>
 

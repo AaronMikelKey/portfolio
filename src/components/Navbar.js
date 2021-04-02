@@ -16,7 +16,7 @@ const Navbar = (props) => {
         <NavLink exact to='/'>
           <li className={props.themeName}><i className='fas fa-home' />Home</li>
         </NavLink>
-        <NavLink to='/about'>
+        <NavLink to='/about.html'>
           <li className={props.themeName}><i className='fas fa-info-circle' />About</li>
         </NavLink>
         <NavLink to='/contact'>
