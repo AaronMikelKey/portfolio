@@ -1,0 +1,38 @@
+@use './vars.sass' as *
+
+@font-face 
+	font-family: Fredericka the Great
+	src: url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
+
+@font-face
+	font-family: answer3d
+	src: url('./fonts/answer.3d-filled-regular.ttf') format('truetype')
+
+.contact
+	height: 100%
+	width: 100%
+	display: grid
+	grid-template-columns: 10% 1fr 10%
+	grid-template-rows: 50px 100vh 
+	grid-template-areas: ". . ."". content ."
+	text-align: center
+	.content
+		grid-area: content
+	h1
+		font-family: Fredericka the Great
+		font-size: 3em
+.contact-grid
+	display: grid
+	height: 100%
+	width: 100%
+	gap: 0 5px
+	grid-template-columns: 1fr
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+	grid-template-areas: ".""a1""a2""a3""."
+	align-items: center
+	a
+		text-decoration: none
+		color: inherit
+		font-size: 3em
+	span
+		font-family: Fredericka the Great
