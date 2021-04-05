@@ -1,0 +1,31 @@
+@use './vars.sass' as *
+
+@font-face 
+	font-family: Fredericka the Great
+	src: url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
+
+.container-p
+	height: 100%
+	width: 100%
+	display: grid
+	grid-template-columns: 5% 1fr 1fr 5%
+	grid-template-rows: 50px 250px 500px 500px 500px 110px 
+	gap: 20px 70px
+	grid-template-areas: ". . . ."". header-p header-p ."". p1 . ."". . . ."". . . ."". . . ."
+	text-align: center
+	h1
+		font-family: Fredericka the Great
+		font-size: 3em
+	.header-p
+		grid-area: header-p
+	.p1
+		grid-area: p1
+		height: 100%
+		width: 100%
+		text-decoration: none
+		color: inherit
+		border: 1px solid red
+		img
+			object-fit: cover
+			max-height: 60%
+			width: auto
