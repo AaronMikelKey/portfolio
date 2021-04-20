@@ -1,5 +1,6 @@
 import React from 'react'
 import jandkscreenshot from '../css/photos/JandkScreenshot.png'
+import twitchSubsScreenshot from '../css/photos/twitchSubsScreenshot.png'
 import '../css/projects.sass'
 
 const Projects = () => {
@@ -13,6 +14,11 @@ const Projects = () => {
         <h2>J&amp;K Paints and Pixels</h2>
         <img src={jandkscreenshot}></img>
         <p className='description'>A simple react website for a local business</p>
+      </a>
+      <a href='https://twitch-streamer-check.herokuapp.com' target='_blank' className='p2'>
+        <h2>Twitch Follows Checker</h2>
+        <img src={twitchSubsScreenshot}></img>
+        <p className='description'>A simple app to showcase intergration with the Twitch.tv API</p>
       </a>
     </div>
   )
