@@ -13,12 +13,12 @@ const Projects = () => {
       <a href='https://jandkpaintsandpix.com' target='_blank' className='p1'>
         <h2>J&amp;K Paints and Pixels</h2>
         <img src={jandkscreenshot}></img>
-        <p className='description'>A simple react website for a local business</p>
+        <p className='description'>A react website I made for a local business</p>
       </a>
       <a href='https://twitch-streamer-check.herokuapp.com' target='_blank' className='p2'>
         <h2>Twitch Follows Checker</h2>
         <img src={twitchSubsScreenshot}></img>
-        <p className='description'>A simple app to showcase intergration with the Twitch.tv API</p>
+        <p className='description'>An app I made to showcase intergration with the Twitch.tv API</p>
       </a>
     </div>
   )
