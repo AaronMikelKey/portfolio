@@ -4,35 +4,43 @@ import { NavLink } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/js/all'
 
 const Navbar = (props) => {
-  let themeName = ''
-  if(props.themeName === 'darkmode') {
-    themeName = 'lightmode'
-  } else {
-    themeName = 'darkmode'
-  }
-  return (
-    <nav className='nav darkmode'>
-      <ul>
-        <NavLink exact to='/'>
-          <li className={props.themeName}><i className='fas fa-home' />Home</li>
+	let themeName = ''
+	if (props.themeName === 'darkmode') {
+		themeName = 'lightmode'
+	} else {
+		themeName = 'darkmode'
+	}
+	return (
+		<nav className='nav darkmode'>
+			<ul>
+				<li className={props.themeName}>
+					<NavLink exact to='/'>
+						<i className='fas fa-home' /><span>Home</span>
         </NavLink>
-        <NavLink to='/about.html'>
-          <li className={props.themeName}><i className='fas fa-info-circle' />About</li>
+				</li>
+				<li className={props.themeName}>
+					<NavLink to='/about.html'>
+						<i className='fas fa-info-circle' /><span>About</span>
         </NavLink>
-        <NavLink to='/contact'>
-          <li className={props.themeName}><i className='fas fa-envelope' />Contact</li>
+				</li>
+				<li className={props.themeName}>
+					<NavLink to='/contact'>
+						<i className='fas fa-envelope' /><span>Contact</span>
         </NavLink>
-        <NavLink to='/projects'>
-          <li className={props.themeName}><i className='fas fa-code-branch' />Projects</li>
+				</li>
+				<li className={props.themeName}>
+					<NavLink to='/projects'>
+						<i className='fas fa-code-branch' /><span>Projects</span>
         </NavLink>
-        <li>
-          <button type='button' className={props.themeName + ' ' + 'btn-switch'} onClick={props.changeTheme}> 
-            <div className='btn-slider'></div>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  )
+				</li>
+				<li>
+					<button type='button' className={props.themeName + ' ' + 'btn-switch'} onClick={props.changeTheme}>
+						<div className='btn-slider'></div>
+					</button>
+				</li>
+			</ul>
+		</nav>
+	)
 }
 
 export default Navbar
