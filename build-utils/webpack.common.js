@@ -53,10 +53,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Aaron Key\'s Portfolio',
       //favicon: './src/images/favicon.ico',
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '/src/index.html'),
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '/src/index.html'),
       inject: true,
       filename: 'about.html',
     }),
