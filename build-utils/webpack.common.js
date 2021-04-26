@@ -62,13 +62,13 @@ module.exports = {
     }),
   ],
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, './dist'),
+    contentBase: path.resolve(__dirname, '../dist'),
     hot: true,
   },
 };
