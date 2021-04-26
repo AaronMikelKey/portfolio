@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/home.sass'
 import FadeIn from 'react-fade-in'
 import ExpIcon from '../components/ExpIcon'
@@ -13,26 +13,30 @@ const Home = (props) => {
   let hTime = t ? '0' : '3000'
 
   {/* arrow transition duration and delay */}
-  let aTime = t ? ['0','0'] : ['4500','2000']
+  let aTime = t ? ['0','0'] : ['3000','0']
 
   {/* image transition duration and delay */}
   let iTime = t ? ['0','0'] : ['3000','2000']
 
   {/* bounce  animation */}
-  let bounce = t ? 'bounced' : 'bouce'
+  let bounce = t ? 'bounced' : 'bounce'
 
   {/* experience transition duration and delay */}
   let eTime = t2 ? ['0','0'] : ['3000']
 
   {/* functions to set props.loaded */}
   const loaded1 = () => {
-    props.setLoaded(prevState => ({
-      ...prevState,
-      home: {
-        ...prevState.home,
-        content1: true
-      }
-    }))
+		setTimeout(() => {
+			props.setLoaded(prevState => ({
+				...prevState,
+				home: {
+					...prevState.home,
+					content1: true
+				}
+			}))
+		}, 
+    10000
+		)
   }
   const loaded2 = () => {
     props.setLoaded(prevState => ({
@@ -81,10 +85,7 @@ const Home = (props) => {
         </FadeIn>
         <div className='content-2'>
       {/* move experience to another component? */}
-          <div >
-          <h3 className='title'>Experience with: </h3>
-          <ExpIcon />
-        </div>
+          <Experience />
         </div>
       </div>
   )

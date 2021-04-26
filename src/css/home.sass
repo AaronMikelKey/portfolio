@@ -9,7 +9,7 @@ path
 
 .grid-container
 	@include grid-container
-	grid-template-rows: 50px minmax(500px,100vh) minmax(500px,100vh) 110px
+	grid-template-rows: 50px minmax(500px,90vh) minmax(500px,90vh) 110px
 	grid-template-areas: ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
@@ -40,26 +40,23 @@ path
 
 .bounce
 	animation: bounce-1
-	animation-duration: 8s
-	animation-timing-function: cubic-bezier(0.3,0.65,0.2,0.65)
-	animation-iteration-count: 2
+	animation-duration: 2s
+	animation-timing-function: ease-in-out
+	animation-iteration-count: 12
 	margin-top: 20px
 
 @keyframes bounce-1
 	0%
-		transform: translateY(80px)
-	25%
 		transform: translateY(0)
 	50%
-		transform: translateY(80px)
-	75%
-		transform: translateY(0)
+		transform: translateY(100px)
 	100%
-		transform: translateY(80px)
+		transform: translateY(0)
 
 .bounced
 	position: relative
 	top: 80px
+	margin-top: 20px
 
 .arrow-div
 	display: flex

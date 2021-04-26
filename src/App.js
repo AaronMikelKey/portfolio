@@ -35,6 +35,9 @@ const App = () => {
     }
   })
 
+	const [offset, setOffset] = useState(0)
+	const [scrolled, setScrolled] = useState(false)
+
   if (isIE) return <div>Internet Explorer is not supported.  Please download Firefox, Chrome, or another web browser.</div>
   const changeThemeClick = () => {
     let l = document.querySelectorAll('.lightmode');
@@ -76,7 +79,14 @@ const App = () => {
         </Route>
 
         <Route path="/">
-          <Home loaded={loaded} setLoaded={setLoaded} />
+          <Home 
+						loaded={loaded} 
+						setLoaded={setLoaded} 
+						offset={offset} 
+						setOffset={setOffset}
+						scrolled={scrolled}
+						setScrolled={setScrolled} 
+						/>
         </Route>
 
       </Switch>
