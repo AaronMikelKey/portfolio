@@ -1,20 +1,18 @@
 @use './vars.sass' as *
 
-.nav
+.nav, .navburger
 	display: block
 	width: 100%
 	height: 50px
 	position: fixed
 	z-index: 1
-ul
-	height: 50px
-	list-style: none
-	margin: 0
-	padding: 0
+	ul
+		height: 50px
+		list-style: none
+		margin: 0
+		padding: 0
 	li
 		height: 50px
-		width: 20%
-		display: inline-block
 		line-height: 50px
 		position: relative
 		a
@@ -30,9 +28,52 @@ ul
 			left: 50%
 			transform: translate(-50%,-50%)
 			cursor: pointer
-			svg
-				margin-right: 5px
-			span
-				display: none
-				@media screen and ( min-width: 1010px )
-					display: inline
+
+.nav
+	li
+		width: 20%
+		display: inline-block
+	svg
+		margin-right: 5px
+
+.navburger
+	div
+		height: 50px
+		line-height: 50px
+		position: relative
+	#themeName, #expandButton
+		display: inline-block
+		height: 50px
+		width: 50%
+		a
+			float: right
+			font-size: 1.2em
+			padding-right: 10px
+	#expandContainer
+		height: 50px
+		width: 50px
+		cursor: pointer
+		:hover
+			color: #888
+	#navmenu
+		height: 240px
+		position: absolute
+		width: 50vw
+		li
+			margin-bottom: 10px
+			:hover
+				background-color: rgba(0,0,0,0.5)
+			:focus
+				background-color: rgba(0,0,0,0.5)
+			a
+				display: block
+				width: 100%
+
+.collapsed
+	display: none
+
+.fa-bars, .fa-times
+	color: inherit
+	top: 0
+	position: fixed
+	left: 20px

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {isIE} from 'react-device-detect'
 import {
   BrowserRouter as Router,
@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom"
 import Navbar from './components/Navbar'
+import NavBurger from './components/NavBurger'
 import About from './dir/About'
 import Contact from './dir/Contact'
 import Projects from './dir/Projects'
@@ -16,9 +17,11 @@ import ScrollTop from './components/ScrollTop'
 
 
 const App = () => {
+
   {/* Determines lightmode or darkmode */}
   const [themeName, changeTheme] = useState('darkmode')
-
+	const [offset, setOffset] = useState(0)
+	const [scrolled, setScrolled] = useState(false)
   {/* State setting for fade in elements */}
   const [loaded, setLoaded] = useState({ 
     home: {
@@ -35,8 +38,28 @@ const App = () => {
     }
   })
 
-	const [offset, setOffset] = useState(0)
-	const [scrolled, setScrolled] = useState(false)
+	const getWidth = () => {
+		return document.body.clientWidth
+	}
+	const [width, setWidth] = useState(getWidth())
+
+	const useCurrentWidth = () => {
+		useEffect(() => {
+			let timeout = null
+			const resizeListener = () => {
+				clearTimeout(timeout)
+				timeout = setTimeout(() => setWidth(getWidth()), 250) // Keeps the resize listener from running too many times if someone is resizing their window.
+			}
+			window.addEventListener('resize', resizeListener)
+
+			return () => {
+				window.removeEventListener('resize', resizeListener)
+			}
+		}, [])
+		return width
+	}
+	
+
 
   if (isIE) return <div>Internet Explorer is not supported.  Please download Firefox, Chrome, or another web browser.</div>
   const changeThemeClick = () => {
@@ -56,10 +79,19 @@ const App = () => {
       d[k].classList.remove('darkmode')
     }
   }
+
+	const Nav = (props) => {
+		return (
+			width < 1080 ? <NavBurger {...props} /> : <Navbar {...props}/>
+		)
+	}
+
+
+	useCurrentWidth()
   return (
     <Router>
       <ScrollTop />
-      <Navbar themeName={themeName} changeTheme={ changeThemeClick }/>
+      <Nav themeName={themeName} changeTheme={changeThemeClick} />
       <Switch>
 
         <Route path="/about.html">
