@@ -22,16 +22,11 @@ const About = () => {
         <div className='about-div'>
         <p className='about-p'>
           My name is Aaron Key and I'm a full stack developer from South Carolina.  
-          I started studying HTML in middle school so my friends and I could add pictures and other things to our myspace pages.  
-          I didn't know at the time that there were career paths in web development so I never learned much more back then.  
-          After high school I got a degree in General Engineering Technology and while I liked what I was doing at the time it didn't 
-          allow me to be very innovative or creative.
+          I started studying HTML in middle school so my friends and I could edit our myspace pages.
         </p>
         <p className='about-p'>
-          In 2016 I decided to look back into web development and see what had changed. There was so much more to learn now and so many 
-          interesting languages and web applications that I wanted to learn how to make.  I started with some simple static HTML sites and 
-          bought several books and eventually started working with React, NodeJS, REST APIs and making neat projects just for fun, but then 
-          realized I enjoy making things work and look nice and decided to pursue a career in web development.  
+          I started with some simple static HTML sites, bought several books, and eventually started working with React, NodeJS, and RESTful APIs. 
+					I made some simple but neat projects just for fun, and realized I enjoy making things work and look nice and decided to pursue a career in web development.  
           I've made some smaller simple websites for local businesses and several apps for personal use in things that interest me.
         </p>
         <p className='about-p'>

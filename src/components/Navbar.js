@@ -4,12 +4,6 @@ import { NavLink } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/js/all'
 
 const Navbar = (props) => {
-	let themeName = ''
-	if (props.themeName === 'darkmode') {
-		themeName = 'lightmode'
-	} else {
-		themeName = 'darkmode'
-	}
 	return (
 		<nav className='nav darkmode'>
 			<ul>
@@ -33,10 +27,10 @@ const Navbar = (props) => {
 						<i className='fas fa-code-branch' /><span>Projects</span>
         </NavLink>
 				</li>
-				<li>
-					<button type='button' className={props.themeName + ' ' + 'btn-switch'} onClick={props.changeTheme}>
-						<div className='btn-slider'></div>
-					</button>
+				<li className={props.themeName} id='themeName'>
+					<a className={props.themeName} onClick={props.changeTheme} >
+						{props.themeName == 'lightmode' ? 'Darkmode?' : 'Lightmode?'}
+					</a>
 				</li>
 			</ul>
 		</nav>
