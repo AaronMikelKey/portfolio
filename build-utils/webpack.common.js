@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: [
     'react-hot-loader/patch',
-    path.resolve(__dirname, '..', './src/index.js')
+    path.resolve(__dirname, '..', './index.js')
   ],
   module: {
     rules: [
