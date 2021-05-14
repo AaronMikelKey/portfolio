@@ -1,4 +1,4 @@
-![Status message](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status message](https://img.shields.io/badge/Status-Deployed-success)
 # Aaron Key
 ## This is the raw code for my portfolio.
 
