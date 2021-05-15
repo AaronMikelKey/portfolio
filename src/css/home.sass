@@ -9,12 +9,12 @@ path
 
 .grid-container
 	@include grid-container
-	grid-template-rows: 50px minmax(500px,90vh) minmax(500px,90vh) 110px
+	grid-template-rows: 50px minmax(500px,max-content) minmax(500px,max-content) 110px
 	grid-template-areas: ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
-	height: 100% !important
-	width: 100% !important
+	height: 100%
+	width: 100%
 	text-align: center
 	padding: 0
 	h1, h2
@@ -67,15 +67,10 @@ path
 
 
 .content-2
-	height: 100% !important
-	width: 100% !important
+	height: max-content
+	width: 100%
 	text-align: center
-	display: grid
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows: 100px 100px 100px 100px 100px
-	grid-template-areas: "title title title title title"". . . . ."". . . . ."". . . . ."". . . . ."
 	.title
-		grid-area: title
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -85,8 +80,13 @@ path
 			margin: auto
 			display: block
 			font-size: 30px
-	div
-		display: contents
+
+.expIcon
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+	grid-template-rows: 100px 100px 100px 100px 100px 
+	grid-template-areas: ". . . . ."". . . . ."". . . . ."". . . . ."". . . . ."
+
 
 .express-svg
 	height: 1em

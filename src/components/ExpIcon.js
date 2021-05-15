@@ -1,9 +1,7 @@
 import React from 'react'
-import iconList from './IconList.js'
 
-const ExpIcon = () => {
-	let arr = iconList
-	return arr.map((item) => {
+const ExpIcon = (props) => {
+	return props.arr.map((item) => {
 		if(item.className !== 'express-svg')
 			return (
 				<span className='item' key={item.title} >
