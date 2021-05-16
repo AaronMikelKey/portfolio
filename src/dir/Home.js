@@ -14,14 +14,8 @@ const Home = (props) => {
 	{/* header transition duration */ }
 	let hTime = t ? '0' : '3000'
 
-	{/* arrow transition duration and delay */ }
-	let aTime = t ? ['0', '0'] : ['3000', '0']
-
 	{/* image transition duration and delay */ }
 	let iTime = t ? ['0', '0'] : ['3000', '2000']
-
-	{/* bounce  animation */ }
-	let bounce = t ? 'bounced' : 'bounce'
 
 	{/* 
 	functions to set props.loaded 
@@ -51,8 +45,10 @@ const Home = (props) => {
 		}))
 	}
 
-	{/* function to animate */ }
-
+	{/* 
+		function to set iconList.
+		react-fade-in doesn't work well if the children are another component's children
+	*/ }
 
 	useEffect(() => {
 		if (props.loaded.home.content1 == true) {
@@ -67,36 +63,30 @@ const Home = (props) => {
 					<h1>Aaron Key</h1>
 					<h2>Full Stack Web Developer</h2>
 				</FadeIn>
-				<FadeIn delay={aTime[0]} transitionDuration={aTime[1]} className={bounce} >
-					<div className='arrow-div'>
-						<i className='fas fa-arrow-down' />
-						<i className='fas fa-arrow-down' />
-					</div>
-				</FadeIn>
 			</header>
 			<FadeIn delay={iTime[0]} transitionDuration={iTime[1]} className='picture-1'>
 				<img src={photo} alt='An image of myself' />
 			</FadeIn>
 			<div className='content-2'>
-				<FadeIn className='expIcon' delay='300' transitionDuration={'1000'} onComplete={loaded2} >
+				<FadeIn className='expIcon' delay='200' transitionDuration='800' onComplete={loaded2} >
 					{/* Fade in component only allows you to add a class to EVERY child so have to add some filler divs to fit the grid */}
-					<div></div><div></div>
+					<div aria-hidden='true'></div><div aria-hidden='true'></div>
 					<h3 className='title'>Experience with: </h3>
-					<div></div><div></div>
+					<div aria-hidden='true'></div><div aria-hidden='true'></div>
 					{/* Some of these are from font-awesome but some I had to copy the svg paths */}
 					{
 						Experience.map((item) =>
 							item.className !== 'express-svg' ? (
 								<div key={item.title} >
 									<span className='item' >
-										<i className={item.className} />
+										<i className={item.className}  aria-hidden='true' />
 										{item.title}
 									</span>
 								</div>
 							) : (
 								<div key={item.title} >
 									<span className='item' >
-										<svg viewBox="0 0 128 128" className='express-svg'>
+										<svg viewBox="0 0 128 128" className='express-svg'  aria-hidden='true'>
 											<path d={item.path} /><path d={item.path2} />
 										</svg>
 										{item.title}
