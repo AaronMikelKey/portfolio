@@ -88,7 +88,9 @@ path
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 	grid-template-rows: 100px 100px 100px 100px 100px 
-	grid-template-areas: ". . . . ."". . . . ."". . . . ."". . . . ."". . . . ."
+	grid-template-areas: ". title title title ."". . . . ."". . . . ."". . . . ."". . . . ."
+	.title
+		grid-area: title
 
 
 .express-svg
@@ -105,25 +107,36 @@ path
 
 @media screen and (max-width: 1023px)
 	.grid-container
-		grid-template-rows: 150px minmax(400px,550px) 500px 110px
-		grid-template-columns: 2% 1fr 1% 1fr 1fr 2%
+		grid-template-rows: 50px 150px minmax(400px,max-content) 500px 110px
+		grid-template-columns: 1fr 1% 1fr 1fr
 		gap: 30px 20px
-		grid-template-areas: ". picture-1 picture-1 picture-1 picture-1 ."". content-1 content-1 content-1 content-1 ."". content-2 content-2 content-2 content-2 ."". . content-3 content-3 picture-3 ."". picture-4 content-4 . . .""footer footer footer footer footer footer"
+		grid-template-areas: ". . . .""picture-1 picture-1 picture-1 picture-1""content-1 content-1 content-1 content-1""content-2 content-2 content-2 content-2"". content-3 content-3 picture-3""picture-4 content-4 . .""footer footer footer footer"
 	.content-1
 		h1
 			font-size: 3em
 		h2
 			font-size: 2em
 	.picture-1
-		position: relative
-		top: 50px
+		margin: 0
 		div
 			height: 100%
 			width: 100%
+			margin: 0
 			img
-				height: 90%
+				height: 100%
 				width: auto
+	.expIcon
+		grid-template-columns: 25% 25% 25% 25%
+		grid-template-rows: 100px 100px 100px 100px 100px 100px
+		grid-template-areas: ". title title ."". . . ."". . . ."". . . ."". . . ."". . . ."
 	.content-2
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-template-rows: 60px 100px 100px 100px 100px
-		grid-template-areas: "title title title title"". . . ."". . . ."". . . ."". . . ."
+		width: 95%
+		margin: auto
+		.title
+			font-size: 0.85em
+		.item
+			font-size: 0.85em
+			svg
+				font-size: 1.85em
+	.svg-inline--fa
+		height: 0.9em

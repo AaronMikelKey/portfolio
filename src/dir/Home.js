@@ -17,6 +17,19 @@ const Home = (props) => {
 	{/* image transition duration and delay */ }
 	let iTime = t ? ['0', '0'] : ['3000', '2000']
 
+	const setClass = () => {
+		let grid = document.getElementsByClassName('expIcon')[0].childNodes
+		if(grid.length == 25) {
+		let node1 = grid[1]
+		let node2 = grid[2]
+		let node3 = grid[3]
+
+		node1.remove()
+		node3.remove()
+		node2.classList.add('title')
+		}
+	}
+
 	{/* 
 	functions to set props.loaded 
 	This prevents the animations from going again if the user switches to another page and back to home
@@ -54,7 +67,9 @@ const Home = (props) => {
 		if (props.loaded.home.content1 == true) {
 			setExperience(iconList)
 		}
+		setClass()
 	})
+
 
 	return (
 		<div className='grid-container'>
