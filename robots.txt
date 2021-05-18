@@ -1,0 +1,5 @@
+User-Agent: * 
+Allow: /
+Disallow: /devtest
+Disallow: /*.ttf
+Crawl-delay: 12
