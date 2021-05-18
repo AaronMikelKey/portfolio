@@ -56,11 +56,6 @@ module.exports = {
       favicon: './src/css/photos/icons/favicon.ico',
       template: path.resolve(__dirname, '/src/index.html'),
     }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '/src/index.html'),
-      inject: true,
-      filename: 'about.html',
-    }),
 		new CopyWebpackPlugin({
 			patterns: [
 				{

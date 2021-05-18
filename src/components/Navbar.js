@@ -13,7 +13,7 @@ const Navbar = (props) => {
         </NavLink>
 				</li>
 				<li className={props.themeName}>
-					<NavLink to='/about.html'>
+					<NavLink to='/about'>
 						<i className='fas fa-info-circle' /><span>About</span>
         </NavLink>
 				</li>

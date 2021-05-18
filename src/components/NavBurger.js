@@ -32,7 +32,7 @@ const NavBurger = (props) => {
 				</NavLink>
 			</li>
 			<li className={props.themeName} onClick={burgerClick}>
-				<NavLink to='/about.html'>
+				<NavLink to='/about'>
 					<i className='fas fa-info-circle' /><span>About</span>
 				</NavLink>
 			</li>
