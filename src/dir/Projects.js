@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import jandkscreenshot from '../css/photos/JandkScreenshot.png'
 import twitchSubsScreenshot from '../css/photos/twitchSubsScreenshot.png'
 import '../css/projects.sass'
 
 const Projects = () => {
+	useEffect(() => {
+		document.title = 'Projects'
+		document.querySelector('meta[name="description"]').setAttribute('content', 'This is a list of my latest completed projects.  I may be working on other things that are on my github page but are not finished just yet.')
+	}, [])
   return (
     <div className='container-p'>
       <header className='header-p'>

@@ -68,7 +68,12 @@ const Home = (props) => {
 			setExperience(iconList)
 		}
 		setClass()
-	})
+		})
+
+	useEffect(() => {
+		document.title = 'Aaron Key\'s Portfolio'
+		document.querySelector('meta[name="description"]').setAttribute('content', 'My name is Aaron Key and I\'m a full stack developer originally from South Carolina. I love working with different languages and libraries but currently am using the MERN stack.')
+	}, [])
 
 
 	return (

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/contact.sass'
 
 const Contact = () => {
+	useEffect(() => {
+		document.title = 'Contact Me'
+		document.querySelector('meta[name="description"]').setAttribute('content', 'Here are the best ways to contact me to recieve a quick response.')
+	}, [])
   return (
     <div className='contact'>
       <div className='content'>

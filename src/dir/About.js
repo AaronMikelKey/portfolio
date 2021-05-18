@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/about.sass'
 import img1 from '../css/photos/IMG_0428.jpeg'
 import img2 from '../css/photos/Ted.jpeg'
 import img3 from '../css/photos/IMG_4278.jpg'
 
 const About = () => {
+	useEffect(() => {
+		document.title = 'About Me'
+		document.querySelector('meta[name="description"]').setAttribute('content', 'My name is Aaron Key and I\'m a full stack developer originally from South Carolina. I love working with different languages and libraries but currently am using the MERN stack.')
+	}, [])
   return (
     <div className='grid-container-a'>
         <header className='content-1a'>
