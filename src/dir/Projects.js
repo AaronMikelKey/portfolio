@@ -17,12 +17,17 @@ const Projects = () => {
       <a href='https://jandkpaintsandpix.com' target='_blank' className='p1'>
         <h2>J&amp;K Paints and Pixels</h2>
         <img src={jandkscreenshot}></img>
-        <p className='description'>A react website I made for a local business</p>
+        <p className='description'>
+					A react website I made for a local business. The portfolio page uses the facebook graph API to pull the most recent pictures from their uploads and displays them in columns, but ordered left to right.
+				</p>
       </a>
       <a href='https://twitch-streamer-check.herokuapp.com' target='_blank' className='p2'>
         <h2>Twitch Follows Checker</h2>
         <img src={twitchSubsScreenshot}></img>
-        <p className='description'>An app I made to showcase intergration with the Twitch.tv API</p>
+        <p className='description'>
+					An app I made to showcase intergration with the Twitch.tv API.  This app uses OAUTH2 to sign into twitch and pulls the list of streamers you follow, then displays their stream info if they are currently streaming.
+					Since it is hosted on heroku's hobby dynos it may take a few seconds to start when you visit.
+				</p>
       </a>
     </div>
   )
