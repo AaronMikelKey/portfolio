@@ -30,7 +30,7 @@ const Projects = () => {
 					Since it is hosted on heroku's hobby dynos it may take a few seconds to start when you visit.
 				</p>
       </a>
-			<a href='https://github.com/AaronMikelKey/team-builder' target='_blank' className='p2'>
+			<a href='https://github.com/AaronMikelKey/team-builder' target='_blank' className='p3'>
         <h2>CLI Team Builder</h2>
         <img src={teamBuilder}></img>
         <p className='description'>
