@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import jandkscreenshot from '../css/photos/JandkScreenshot.png'
 import twitchSubsScreenshot from '../css/photos/twitchSubsScreenshot.png'
+import teamBuilder from '../css/photos/team-builder.png'
 import '../css/projects.sass'
 
 const Projects = () => {
@@ -27,6 +28,13 @@ const Projects = () => {
         <p className='description'>
 					An app I made to showcase intergration with the Twitch.tv API.  This app uses OAUTH2 to sign into twitch and pulls the list of streamers you follow, then displays their stream info if they are currently streaming.
 					Since it is hosted on heroku's hobby dynos it may take a few seconds to start when you visit.
+				</p>
+      </a>
+			<a href='https://github.com/AaronMikelKey/team-builder' target='_blank' className='p3'>
+        <h2>CLI Team Builder</h2>
+        <img src={teamBuilder}></img>
+        <p className='description'>
+				This is a CLI app that will allow you to build a team consisting of a manager, and as many engineers and/or interns as you would like. You can then input their information, and the app will create a static HTML page that displays the team.
 				</p>
       </a>
     </div>
