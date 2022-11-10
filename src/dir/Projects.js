@@ -60,7 +60,7 @@ const Projects = () => {
         </p>
       </a>
       <a href="https://personal-sunrise-test.herokuapp.com/" target="_blank" className="p4">
-        <h2>Lawn Care Scheduling App</h2>
+        <h2>Rental Property Scheduling App</h2>
         <img src={personalSunrise}></img>
         <p className="description">
           This was a group project for a member who wanted to create a
