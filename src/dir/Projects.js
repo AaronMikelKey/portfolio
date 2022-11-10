@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import jandkscreenshot from "../css/photos/JandkScreenshot.png";
 import twitchSubsScreenshot from "../css/photos/twitchSubsScreenshot.png";
 import teamBuilder from "../css/photos/team-builder.png";
+import personalSunrise from "../css/photos/personalSunrise.PNG";
 import "../css/projects.sass";
 
 const Projects = () => {
@@ -58,13 +59,15 @@ const Projects = () => {
           HTML page that displays the team.
         </p>
       </a>
-      <a href="https://d-cubed.herokuapp.com/" target="_blank" className="p4">
+      <a href="https://personal-sunrise-test.herokuapp.com/" target="_blank" className="p4">
         <h2>Lawn Care Scheduling App</h2>
-        <img src="https://raw.githubusercontent.com/AaronMikelKey/d-cubed-lawncare/main/public/Screenshot1.png"></img>
+        <img src={personalSunrise}></img>
         <p className="description">
-          This was a group project for a gentleman who wanted to create a
-          website for his growing business.
-          <a href="https://github.com/AaronMikelKey/d-cubed-lawncare">
+          This was a group project for a member who wanted to create a
+          website for his rental property.  This app allows you to view info about the property, 
+					view available dates, and request a reservation.  It also allows the owner to confirm reservations and
+					add them to the calendar.
+          <a href="https://github.com/EricksonVIK/Personal_Sunrise_NC">
             You can view the repo and contributors here.
           </a>
         </p>
