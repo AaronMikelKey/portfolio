@@ -9,28 +9,23 @@ const Navbar = (props) => {
 			<ul>
 				<li className={props.themeName}>
 					<NavLink exact to='/'>
-						<i className='fas fa-home' /><span>Home</span>
+						<button>Home</button>
         </NavLink>
 				</li>
 				<li className={props.themeName}>
 					<NavLink to='/about'>
-						<i className='fas fa-info-circle' /><span>About</span>
+						<button>About</button>
         </NavLink>
 				</li>
 				<li className={props.themeName}>
 					<NavLink to='/contact'>
-						<i className='fas fa-envelope' /><span>Contact</span>
+						<button>Contact</button>
         </NavLink>
 				</li>
 				<li className={props.themeName}>
 					<NavLink to='/projects'>
-						<i className='fas fa-code-branch' /><span>Projects</span>
+						<button>Projects</button>
         </NavLink>
-				</li>
-				<li className={props.themeName} id='themeName'>
-					<a className={props.themeName} onClick={props.changeTheme} >
-						{props.themeName == 'lightmode' ? 'Darkmode?' : 'Lightmode?'}
-					</a>
 				</li>
 			</ul>
 		</nav>
