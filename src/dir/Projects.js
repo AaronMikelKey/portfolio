@@ -31,7 +31,7 @@ const Projects = () => {
         </p>
       </a>
       <a
-        href="https://twitch-streamer-check.herokuapp.com"
+        href="https://twitch-streams-test.fly.dev"
         target="_blank"
         className="p2"
       >
