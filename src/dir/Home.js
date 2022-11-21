@@ -3,6 +3,7 @@ import '../css/home.sass'
 import FadeIn from 'react-fade-in'
 import photo from '../css/photos/Aaron-01.png'
 import iconList from '../components/IconList'
+import experienceItems from './assets/js/experience'
 
 const Home = (props) => {
 
@@ -17,18 +18,7 @@ const Home = (props) => {
 	{/* image transition duration and delay */ }
 	let iTime = t ? ['0', '0'] : ['3000', '2000']
 
-	const setClass = () => {
-		let grid = document.getElementsByClassName('expIcon')[0].childNodes
-		if(grid.length == 25) {
-		let node1 = grid[1]
-		let node2 = grid[2]
-		let node3 = grid[3]
-
-		node1.remove()
-		node3.remove()
-		node2.classList.add('title')
-		}
-	}
+	
 
 	{/* 
 	functions to set props.loaded 
@@ -67,7 +57,6 @@ const Home = (props) => {
 		if (props.loaded.home.content1 == true) {
 			setExperience(iconList)
 		}
-		setClass()
 		})
 
 	useEffect(() => {
@@ -87,35 +76,55 @@ const Home = (props) => {
 			<FadeIn delay={iTime[0]} transitionDuration={iTime[1]} className='picture-1'>
 				<img src={photo} alt='An image of myself' />
 			</FadeIn>
-			<div className='content-2'>
-				<FadeIn className='expIcon' delay='200' transitionDuration='800' onComplete={loaded2} >
-					{/* Fade in component only allows you to add a class to EVERY child so have to add some filler divs to fit the grid */}
-					<div aria-hidden='true'></div><div aria-hidden='true'></div>
-					<h3 className='title'>Experience with: </h3>
-					<div aria-hidden='true'></div><div aria-hidden='true'></div>
-					{/* Some of these are from font-awesome but some I had to copy the svg paths */}
-					{
-						Experience.map((item) =>
-							item.className !== 'express-svg' ? (
-								<div key={item.title} >
-									<span className='item' >
-										<i className={item.className}  aria-hidden='true' />
-										{item.title}
-									</span>
-								</div>
-							) : (
-								<div key={item.title} >
-									<span className='item' >
-										<svg viewBox="0 0 128 128" className='express-svg'  aria-hidden='true'>
-											<path d={item.path} /><path d={item.path2} />
-										</svg>
-										{item.title}
-									</span>
-								</div>
-							)
-						)
-					}
-				</FadeIn>
+			<div className='content-2 window' style={{textAlign: 'left', color: 'black'}}>
+				<div className='title-bar'>
+					<h3 className='title-bar-text'>Experience with: </h3>
+					</div>
+					<div className='window-body'>
+					<ul className='tree-view'>
+						<li>Web
+							<ul>
+								{experienceItems.web.map(item => <li>{item}</li>)}
+							</ul>
+						</li>
+						<li>
+							HTML
+							<ul>
+								{experienceItems.html.map(item => <li>{item}</li>)}
+							</ul>
+						</li>
+						<li>
+							CSS
+							<ul>
+								{experienceItems.css.map(item => <li>{item}</li>)}
+							</ul>
+						</li>
+						<li>
+							Javascript
+							<ul>
+								{experienceItems.javascript.map(item => <li>{item}</li>)}
+							</ul>
+						</li>
+						<li>
+							Environments
+							<ul>
+								{experienceItems.environments.map(item => <li>{item}</li>)}
+							</ul>
+						</li>
+					{/*
+						Object.keys(experienceItems).forEach((key, value) => {
+							console.log(key, value)
+							return(<>
+								<li>{value}</li>
+								<ul>
+									{value.map((item) => <li>{item}</li>)}
+								</ul></>)
+						})
+							
+					*/}
+					
+					</ul>
+					</div>
 			</div>
 		</div>
 	)

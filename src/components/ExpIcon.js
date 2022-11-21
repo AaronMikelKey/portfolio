@@ -1,23 +1,29 @@
 import React from 'react'
 
 const ExpIcon = (props) => {
-	return props.arr.map((item) => {
-		if(item.className !== 'express-svg')
+		if(props.className !== 'express-svg')
 			return (
-				<span className='item' key={item.title} >
-					<i className={item.className} />
-					{item.title}
-				</span>
+				<>
+					<div className='title-bar' key={props.title} >
+						<div className='title-bar-text'>{props.title}</div>
+					</div>
+					<div className='window-body'>
+					<i className={props.className} />
+					</div>
+				</>
 				)
-		return (
-			<span className='item' key={item.title} >
-				<svg viewBox="0 0 128 128" className='express-svg'>
-					<path d={item.path} /><path d={item.path2} />
+		else return (
+			<>
+					<div className='title-bar' key={props.title} >
+						<div className='title-bar-text'>{props.title}</div>
+					</div>
+					<div className='window-body'>
+					<svg viewBox="0 0 128 128" className='express-svg'>
+					<path d={props.path} /><path d={item.path2} />
 				</svg>
-				{item.title}
-			</span>
+					</div>
+				</>
 			)
-	})
 }
 
 export default ExpIcon
