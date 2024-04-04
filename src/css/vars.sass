@@ -1,6 +1,6 @@
 //Color settings (light, dark)
-$first-l: #80dae2 //rgb(128, 218, 226)
-$fourth-l: #cffff3 //rgb(207, 255, 243)
+$first-l: #0d1117
+$fourth-l: #0d1117
 $first-d: #2e3026 //rgb(46,48,38)
 $fourth-d: #26302a //rgb(38, 48, 42)
 
@@ -8,8 +8,8 @@ $fourth-d: #26302a //rgb(38, 48, 42)
 $transition: 0.35s ease-in-out
 
 //lightmode settings
-@mixin lightmode 
-	color: #000
+@mixin lightmode
+	color: #fff
 	transition: color $transition
 	transition: background $transition
 	transition: background-color $transition
@@ -23,16 +23,15 @@ $transition: 0.35s ease-in-out
 			color: #FFF
 
 //darkmode settings
-@mixin darkmode 
+@mixin darkmode
 	color: #FFF
 	transition: color $transition
 	transition: background $transition
 	transition: background-color $transition
 	html
-		background: #222
+		background: #0d1117
 	body
-		background: #000
-		background: radial-gradient(circle, rgba(46,48,38,0.6) 0%, rgba(46,48,38,0.65) 40%, rgba(46,48,38,0.7) 70%, rgba(46,48,38,0.85) 100%)
+		background: #0d1117
 		position: relative
 		top: 0
 		left: 0
@@ -64,7 +63,7 @@ body
 	grid-template-columns: 5% 1fr 5% 1fr 1fr 5%
 	grid-template-rows: 50px 90vh 500px 400px 400px 110px
 	gap: 20px 20px
-	grid-template-areas: ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 ."". . content-3 content-3 picture-3 ."". picture-4 content-4 . . .""footer footer footer footer footer footer"
+	grid-template-areas: "......"".content-1 content-1 content-1 picture-1 ."".content-2 content-2 content-2 content-2 .""..content-3 content-3 picture-3 ."".picture-4 content-4 ...""footer footer footer footer footer footer"
 	.content-1
 		grid-area: content-1
 	.picture-1
