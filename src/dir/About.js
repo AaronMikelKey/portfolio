@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <div className='about-div'>
         <p className='about-p'>
-          My name is Aaron Key and I'm a full stack developer from South Carolina.  
+          My name is Aaron Key and I'm a full stack developer from North Carolina.  
           I started studying HTML in middle school so my friends and I could edit our myspace pages.
         </p>
         <p className='about-p'>
