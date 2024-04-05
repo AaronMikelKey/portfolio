@@ -7,6 +7,8 @@
 .container-p
 	height: 100%
 	width: 100%
+	max-width: 1200px
+	margin: auto
 	display: grid
 	grid-template-columns: 10px minmax(140px, 1fr) minmax(140px, 1fr) 10px
 	grid-template-rows: 50px 250px minmax(500px, 600px) minmax(500px, 600px) 500px 110px 
@@ -36,6 +38,13 @@ img
 	object-fit: cover
 	max-width: 100%
 	height: auto
+a
+	color: inherit
+	text-decoration: none
+a
+	&:hover
+		h2
+			text-decoration: underline
 
 @media screen and (max-width: 799px)
 	.container-p
