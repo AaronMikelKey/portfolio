@@ -1,6 +1,6 @@
 @use './vars.sass' as *
 
-@font-face 
+@font-face
 	font-family: Fredericka the Great
 	src: url('./fonts/FrederickatheGreat-Regular.ttf') format('truetype')
 
@@ -10,7 +10,7 @@ path
 .grid-container
 	@include grid-container
 	grid-template-rows: 50px minmax(500px,max-content) minmax(500px,max-content) 110px
-	grid-template-areas: ". . . . . ."". content-1 content-1 content-1 picture-1 ."". content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
+	grid-template-areas: "......"".content-1 content-1 content-1 picture-1 ."".content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
 	height: 100%
@@ -26,7 +26,7 @@ path
 	h1
 		font-size: 6em
 	h2
-		font-size: 4em 
+		font-size: 4em
 
 .picture-1
 	margin: auto
@@ -41,6 +41,7 @@ path
 
 @media screen and (max-width: 1336px)
 	.picture-1
+		margin: auto
 		div
 			margin-top: 25%
 
@@ -71,7 +72,6 @@ path
 		font-size: 40px
 		margin: auto
 
-
 .content-2
 	height: max-content
 	width: 100%
@@ -90,11 +90,10 @@ path
 .expIcon
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows: 100px 100px 100px 100px 100px 
-	grid-template-areas: ". title title title ."". . . . ."". . . . ."". . . . ."". . . . ."
+	grid-template-rows: 100px 100px 100px 100px 100px
+	grid-template-areas: ".title title title ."".....""....."".....""....."
 	.title
 		grid-area: title
-
 
 .express-svg
 	height: 1em
@@ -113,7 +112,7 @@ path
 		grid-template-rows: 50px 150px minmax(400px,max-content) 500px 110px
 		grid-template-columns: 1fr 1% 1fr 1fr
 		gap: 30px 20px
-		grid-template-areas: ". . . .""picture-1 picture-1 picture-1 picture-1""content-1 content-1 content-1 content-1""content-2 content-2 content-2 content-2"". content-3 content-3 picture-3""picture-4 content-4 . .""footer footer footer footer"
+		grid-template-areas: "....""picture-1 picture-1 picture-1 picture-1""content-1 content-1 content-1 content-1""content-2 content-2 content-2 content-2"".content-3 content-3 picture-3""picture-4 content-4 ..""footer footer footer footer"
 	.content-1
 		h1
 			font-size: 3em
@@ -131,7 +130,7 @@ path
 	.expIcon
 		grid-template-columns: 25% 25% 25% 25%
 		grid-template-rows: 100px 100px 100px 100px 100px 100px
-		grid-template-areas: ". title title ."". . . ."". . . ."". . . ."". . . ."". . . ."
+		grid-template-areas: ".title title .""....""....""....""....""...."
 	.content-2
 		width: 95%
 		margin: auto
