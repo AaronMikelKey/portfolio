@@ -93,19 +93,19 @@ const App = () => {
 			<Nav themeName={themeName} changeTheme={changeThemeClick} />
 			<Switch>
 				<Route path="/about">
-					<About loaded={loaded} setLoaded={setLoaded} />
+					<About />
 				</Route>
 
 				<Route path="/contact">
-					<Contact loaded={loaded} setLoaded={setLoaded} />
+					<Contact />
 				</Route>
 
 				<Route path="/projects">
-					<Projects loaded={loaded} setLoaded={setLoaded} />
+					<Projects />
 				</Route>
 
 				<Route path="/devtest">
-					<DevTest loaded={loaded} setLoaded={setLoaded} />
+					<DevTest />
 				</Route>
 
 				<Route path="/">
