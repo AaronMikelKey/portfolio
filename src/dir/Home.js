@@ -99,9 +99,13 @@ const Home = (props) => {
 					<h2>Full Stack Web Developer</h2>
 				</FadeIn>
 			</header>
-			<div className="picture-1">
+			<FadeIn
+				delay={iTime[0]}
+				transitionDuration={iTime[1]}
+				className="picture-1"
+			>
 				<img src={photo} alt="An image of myself" />
-			</div>
+			</FadeIn>
 			<div className="content-2">
 				<FadeIn
 					className="expIcon"

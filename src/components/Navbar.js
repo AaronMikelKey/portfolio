@@ -5,30 +5,34 @@ import '@fortawesome/fontawesome-free/js/all'
 
 const Navbar = (props) => {
 	return (
-		<nav className='nav darkmode'>
+		<nav className="nav darkmode">
 			<ul>
 				<li className={props.themeName}>
-					<NavLink exact to='/'>
-						<i className='fas fa-home' /><span>Home</span>
-        </NavLink>
+					<NavLink exact to="/">
+						<i className="fas fa-home" />
+						<span>Home</span>
+					</NavLink>
 				</li>
 				<li className={props.themeName}>
-					<NavLink to='/about'>
-						<i className='fas fa-info-circle' /><span>About</span>
-        </NavLink>
+					<NavLink to="/about">
+						<i className="fas fa-info-circle" />
+						<span>About</span>
+					</NavLink>
 				</li>
 				<li className={props.themeName}>
-					<NavLink to='/contact'>
-						<i className='fas fa-envelope' /><span>Contact</span>
-        </NavLink>
+					<NavLink to="/contact">
+						<i className="fas fa-envelope" />
+						<span>Contact</span>
+					</NavLink>
 				</li>
 				<li className={props.themeName}>
-					<NavLink to='/projects'>
-						<i className='fas fa-code-branch' /><span>Projects</span>
-        </NavLink>
+					<NavLink to="/projects">
+						<i className="fas fa-code-branch" />
+						<span>Projects</span>
+					</NavLink>
 				</li>
-				<li className={props.themeName} id='themeName'>
-					<a className={props.themeName} onClick={props.changeTheme} >
+				<li className={props.themeName} id="themeName">
+					<a className={props.themeName} onClick={props.changeTheme}>
 						{props.themeName == 'lightmode' ? 'Darkmode?' : 'Lightmode?'}
 					</a>
 				</li>
