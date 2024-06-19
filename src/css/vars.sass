@@ -38,10 +38,12 @@ $transition: 0.35s ease-in-out
 		top: 0
 		left: 0
 	.nav, .navburger, #navmenu
-		background-color: $fourth-d
+		background: linear-gradient(90deg, rgb(18, 42, 101) 13%, rgb(18, 41, 101) 36%, rgb(18, 26, 71) 76%, rgb(13, 17, 23) 100%)
 		color: #fff
+		@media screen and (max-width: 1023px)
+			background: rgb(18, 26, 71)
 	nav li a 
-		color: #fff
+			color: #fff
 	.active
 		li
 			background-color: $first-l

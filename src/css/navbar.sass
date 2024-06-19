@@ -12,7 +12,11 @@
 		list-style: none
 		margin: 0
 		padding: 0
+		display: flex
 		margin: auto
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: flex-end
 	li
 		height: 50px
 		line-height: 50px
@@ -33,12 +37,11 @@
 
 .nav
 	li
-		width: calc(20% - 5px)
-		// TODO:
-		// Change float and spacing so logo is always left 
+		width: auto
+		min-width: 175px
 		display: inline-block
 		&:first-child
-			float: left
+			margin-right: auto
 	svg
 		margin-right: 5px
 
@@ -76,7 +79,7 @@
 				width: 100%
 
 .collapsed
-	display: none
+	display: none !important
 
 .fa-bars, .fa-times
 	color: inherit
