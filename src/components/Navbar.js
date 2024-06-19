@@ -9,8 +9,7 @@ const Navbar = (props) => {
 			<ul>
 				<li className={props.themeName}>
 					<NavLink exact to="/">
-						<i className="fas fa-home" />
-						<span>Home</span>
+						<span>Aaron Key</span>
 					</NavLink>
 				</li>
 				<li className={props.themeName}>
