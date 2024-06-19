@@ -15,12 +15,12 @@ const Home = (props) => {
 	{
 		/* header transition duration */
 	}
-	let hTime = t ? '0' : '3000'
+	let hTime = t ? '0' : '50'
 
 	{
 		/* image transition duration and delay */
 	}
-	let iTime = t ? ['0', '0'] : ['3000', '2000']
+	let iTime = t ? ['0', '0'] : ['50', '50']
 
 	const setClass = () => {
 		let grid = document.getElementsByClassName('expIcon')[0].childNodes
@@ -53,7 +53,7 @@ const Home = (props) => {
 					},
 				}))
 			},
-			600,
+			50,
 			[]
 		)
 	}
@@ -109,7 +109,7 @@ const Home = (props) => {
 			<div className="content-2">
 				<FadeIn
 					className="expIcon"
-					delay="200"
+					delay="50"
 					transitionDuration="800"
 					onComplete={loaded2}
 				>

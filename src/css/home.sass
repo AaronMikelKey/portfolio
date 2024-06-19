@@ -10,7 +10,7 @@ path
 .grid-container
 	@include grid-container
 	grid-template-rows: 50px minmax(500px,max-content) minmax(500px,max-content) 110px
-	grid-template-areas: "......"".content-1 content-1 content-1 picture-1 ."".content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
+	grid-template-areas: ". . . . . ."".content-1 content-1 content-1 picture-1 ."".content-2 content-2 content-2 content-2 .""footer footer footer footer footer footer"
 
 .content-1
 	height: 100%
@@ -91,7 +91,7 @@ path
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 	grid-template-rows: 100px 100px 100px 100px 100px
-	grid-template-areas: ".title title title ."".....""....."".....""....."
+	grid-template-areas: ".title title title ."". . . . ."". . . . ."". . . . ."". . . . ."
 	.title
 		grid-area: title
 
