@@ -7,7 +7,7 @@
 	position: fixed
 	z-index: 1
 	ul
-		max-width: 1200px
+		max-width: 1752px
 		height: 100%
 		list-style: none
 		margin: 0
@@ -46,16 +46,25 @@
 		margin-right: 5px
 
 .navburger
+	ul
+		display: block
 	div
 		height: 50px
 		line-height: 50px
 		position: relative
-	#themeName, #expandButton
+	#themeName, #name, #expandButton
 		display: inline-block
 		height: 50px
-		width: 50%
+		width: 33%
 		a
 			float: right
+			font-size: 1.2em
+			padding-right: 10px
+		span
+			position: absolute
+			top: 25%
+			left: 50%
+			transform: translate(-50%)
 			font-size: 1.2em
 			padding-right: 10px
 	#expandContainer

@@ -25,6 +25,9 @@ const NavBurger = (props) => {
 					<i className={props.themeName + ' fas fa-times fa-3x collapsed'} />
 				</div>
 			</div>
+			<NavLink id="name" exact to="/">
+				<span>Aaron Key</span>
+			</NavLink>
 			<ul id="navmenu" className="collapsed">
 				<li className={props.themeName} onClick={burgerClick}>
 					<NavLink exact to="/">
